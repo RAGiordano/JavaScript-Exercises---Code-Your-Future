@@ -36,9 +36,24 @@ h2 {
 }
 
 h3,
-p {
+p,
+ul {
     color: #dedede;
 }
+
+p {
+    margin: 6px 0;
+}
+
+.separator {
+    /* display: block; */
+    border-top: 5px solid #3c3e05;
+    margin: 50px 0;
+}
+
+
+
+
 /* BUTTON */
 button {
     align-items: center;
@@ -120,5 +135,46 @@ form input {
     width: 100px;
     height: 30px;
     border-radius: 4px;
-    margin-right: 30px;
+    margin: 18px 30px 30px 0;
+}
+
+
+/* Task list */
+#task-list-container {
+    width: 700px;
+    /* margin: 50px auto; */
+    padding: 30px;
+    text-align: center;
+    background-color: #272727;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+#task-list-container h1 {
+    margin-bottom: 30px;
+}
+
+
+#task-list-container input {
+    height: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
 }

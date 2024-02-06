@@ -70,16 +70,20 @@
         <!-- TASK 6 -->
         <br><br><br>
         <h2><b>Task 6: Secret number</b></h2><br>
-        <button onclick="secretNumber()">Start!</button>
+        <button onclick="secretNumber6()">Start!</button>
 
         <!-- TASK 7 -->
         <br><br><br>
         <h2><b>Task 7: Currency exchange calculation</b></h2><br>
         <form action="">
             <h3 id="exchange-rate">Currency exchange rate</h3>
-            <label for="money7"><p>Money to exchange:</p></label>
+            <label for="rate7"><p>Currency exchange rate (U$S / $):</p></label>
+            <input type="text" id="rate">
+            <label for="amount7"><p>Amount ($):</p></label>
             <input type="text" id="exchange-rate">
-            <button onclick="buy5(event)">Convert</button>
+            <button onclick="convert7(event)">Convert</button>
+            <br>
+            <h3 id="convertion7"></h3>
         </form>
 
         <!-- TASK 8 -->
@@ -94,7 +98,40 @@
         <br><br><br>
         <h2><b>Task 10: </b></h2><br>
 
+
+        <!-- SEPARATOR -->
+
+
+
+        <!-- TASK 11 -->
+        <br><br><br>
+        <h2><b>Task 10: </b></h2><br>
+
+
+        <!-- TASK 11 -->
+        <br><br><br>
+        <h2><b>Interactive task list</b></h2><br>
         
+        <div id="task-list-container">
+            <h1>My list</h1>
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <button onclick="addTask()">Add</button>
+            <ul id="taskList"></ul>
+        </div>
+
+
+        <!-- ARRAYS -->
+        <br><br><br>
+        <div class="separator"></div>
+        <h2><b>Arrays</b></h2><br>
+
+        <!-- TASK 1 -->
+        <br><br><br>
+        <h2><b>Task 1: Modifying arrays</b></h2><br>
+        <button onclick="modifyingArrays1()">Start!</button>
+        <div id="array1result" style="margin: 20px 0"></div>
+
+
     </main>
 
     <script src="script/script.js"></script>
