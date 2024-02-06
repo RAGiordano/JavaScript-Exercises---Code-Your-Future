@@ -136,14 +136,52 @@ function modifyingArrays1(){
   let shiftedElement = originalArray.shift();
 
 
-  let resultContainer = document.getElementById('array1result');
-  let array1result = document.createElement('div');
-          array1result.innerHTML = `
+  let resultContainer = document.getElementById('array1-result');
+  let array1Result = document.createElement('div');
+          array1Result.innerHTML = `
               <h3 style="margin: 30px 0">Result</h3>
               <p>Original array: ${originalArrayCopy}</p>
               <p>Popped element: ${poppedElement}</p>
               <p>Shifted element: ${shiftedElement}</p>
               <p>My final array: ${originalArray}</p>
           `;
-  resultContainer.appendChild(array1result);
+  resultContainer.appendChild(array1Result);
+}
+
+// SLICE
+function slice2() {
+  let numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  let originalArrayCopy = [] + numbers;
+
+  // Part 1
+  let firstThree = numbers.slice(0, 3);
+
+  // Part 2
+  let lastFour = numbers.slice(-4);
+
+  // Part 3
+  let centralSegment = numbers.slice(3, 8);
+
+  // Part 4
+  let skippedSegment = [];
+  for(let i = 1; i < numbers.length + 1; i += 2){
+    skippedSegment = skippedSegment.concat(numbers.slice(i,i+1));
+  }
+
+  // Part 5
+  let originalArray = numbers.slice();
+  numbers[3] = 0;
+
+  let resultContainer = document.getElementById('slice2-result');
+  let slice2Result = document.createElement('div');
+          slice2Result.innerHTML = `
+              <h3 style="margin: 30px 0">Result</h3>
+              <p>Original array: ${originalArray}</p>
+              <p>First three: ${firstThree}</p>
+              <p>Last four: ${lastFour}</p>
+              <p>Central segment: ${centralSegment}</p>
+              <p>Skipped segment: ${skippedSegment}</p>
+              <p>Modified numbers array: ${numbers}</p>
+          `;
+  resultContainer.appendChild(slice2Result);
 }
